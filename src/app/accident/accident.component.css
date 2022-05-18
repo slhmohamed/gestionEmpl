@@ -1,0 +1,27 @@
+.container{
+    margin-top: 115px !important;
+
+}
+
+button {
+    margin-left: 130px !important;
+    color: #e63939;
+    background: white;
+    border-radius: 50rem !important;
+    width: 172px;
+    border-color: #ff4747;
+}
+.row {
+    margin-bottom: 11px !important;
+    margin-left: 774px  !important;
+}
+button:hover {
+    background: #ff4747;
+    color: white;
+}
+h2 {
+    font-size: 26px;
+    margin: 20px 0;
+    text-align: left;
+}
+

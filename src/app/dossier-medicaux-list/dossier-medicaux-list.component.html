@@ -1,0 +1,34 @@
+<div class ="container">
+    <div class = "card">
+        <h3 class = "text_center"> Dossier Medicaux list </h3>
+        <div class="card_body">
+            <table class="table table-striped">
+                <thead>
+                  <th> Id Dossier</th>
+                  <th>  numero Dossier</th>
+                  <th> Etat</th>
+                  <th>  Id Accident</th>
+                  <th> Id Detail </th>
+                  
+                  <th> Action</th>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let dossier of dossiers ">
+                      <td>{{dossier.id}} </td>
+                     <td>{{dossier.numDossier}}</td>
+                      <td>{{dossier.etat}}</td>
+                      
+                      <td>
+                        <button (click)= "updateDossierMedical(dossier.id)" class = "btn btn-info"> Update</button>
+                       
+                      </td>
+
+                  </tr>
+               
+                </tbody>
+
+            </table>
+        </div>
+    
+    </div>
+</div>

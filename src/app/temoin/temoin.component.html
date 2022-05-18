@@ -1,0 +1,26 @@
+<div class ="container">
+    <div class = "card">
+        <h3 class = "text_center"> Temoin List </h3>
+        <div class="card_body">
+            <table class="table table-striped">
+                <thead>
+                  <th> IdTemoin</th>
+                  <th>Matricule </th>
+                  <th> Age </th>
+                  <th> Cin </th>
+                  <th>Nom </th>
+                  <th>Prenom</th>
+                  
+                 </thead>
+                <tbody>
+                  <tr *ngFor="let temoin of temoins ">
+                      <td>{{temoin.idTemoin}} </td>
+                      <td>{{temoin.cin}} </td>
+                      <td> {{temoin.matricule}}</td>
+                      <td> {{temoin.age}}</td>
+                      
+                      <td>{{temoin.nom}}</td>
+                         <td>{{temoin.prenom}} </td>
+                     
+                      </tr>
+

@@ -1,0 +1,60 @@
+<div class="card m-3">
+    <h5 class="card-header">Enregistrer Nouveaux Temoin</h5>
+    <div class="card-body">
+        <form [formGroup] = "temoinForm" (ngSubmit) ="onSubmit()">
+           
+                <div class="form-group">
+                    <label>Matricule</label>
+                    <input type="text" value="matricule" id="matricule" formControlName="matricule" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && f['matricule'].errors }" />
+                     <div *ngIf="submitted && f['matricule'].errors" class="invalid-feedback">
+                        <div *ngIf="f['matricule'].errors['required']">Matricule must be at least 6 characters</div>
+                    </div>
+               
+                
+                <div class="form-group">
+                    <label>Cin</label>
+                    <input type="text" formControlName="cin" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && f['cin'].errors }" />
+                    <div *ngIf="submitted && f['cin'].errors" class="invalid-feedback">
+                        <div *ngIf="f['cin'].errors['required']">Cin is required</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Nom</label>
+                    <input type="text" formControlName="nom" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && f['nom'].errors }" />
+                    <div *ngIf="submitted && f['nom'].errors" class="invalid-feedback">
+                        <div *ngIf="f['nom'].errors['required']">Nom is required</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Age </label>
+                    <input type="text" formControlName="age" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && f['age'].errors }" />
+                    <div *ngIf="submitted && f['age'].errors" class="invalid-feedback">
+                        <div *ngIf="f['age'].errors['required']">Age  is required</div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Prenom</label>
+                    <input type="text" formControlName="prenom" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && f['prenom'].errors }" />
+                    <div *ngIf="submitted && f['prenom'].errors" class="invalid-feedback">
+                        <div *ngIf="f['prenom'].errors['required']">prenomis required</div>
+                    </div>
+                </div>
+               
+             
+                
+                
+                  
+                <div class="text-center">
+                  <button class ="btn btn-success" (click)="onSubmit()"> submit</button>
+                    <button class="btn btn-secondary" type="reset" (click)="onReset()">Cancel</button>
+                </div>
+            </div>
+        </form>
+    </div>
+  </div>

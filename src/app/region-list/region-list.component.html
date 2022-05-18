@@ -1,0 +1,20 @@
+<div class ="container">
+    <div class = "card">
+        <h3 class = "text_center"> Region list </h3>
+        <div class="card_body">
+            <table class="table table-striped">
+                <thead>
+                  <th> Code Region</th>
+                  
+                  <th> Region </th>
+                  
+                 </thead>
+                <tbody>
+                  <tr *ngFor="let region of regions ">
+                      <td>{{region.codeRegion}} </td>
+                      <td>{{region.libelle}} </td>
+
+                      
+                     
+                      </tr>
+

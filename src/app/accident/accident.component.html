@@ -1,0 +1,40 @@
+<div class ="container">
+    <div class = "card">
+      <h2>Liste des accedents </h2>
+      <div class="row">
+       <button type="submit" routerLink="/create-accident"  >Nouveau accedents</button>
+      </div>
+        <div class="card_body">
+            <table class="table table-striped">
+                <thead>
+                  <th> Id</th>
+                  <th> lieu </th>
+                  <th> description</th>
+                  <th> date</th>
+                  <th> Type Accident </th>
+                  <th> temoin</th>
+                  <th> Action</th>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let accident of accidents ">
+                      <td>{{accident.id}} </td>
+                      <td>{{accident.lieu}} </td>
+                      <td>{{accident.description}} </td>
+                      <td>{{accident.date}} </td>
+                      <td>{{accident.typeaccident.type}}</td>
+                      <td>{{accident.temoin.idTemoin}}</td>
+                      <td>
+                        <button (click)= "updateAccident(accident.id)" class = "btn btn-info"> Update</button>
+                        <button (click)= "detailsAccident(accident.id)" class = "btn btn-info"> View</button>
+
+                      </td>
+
+                  </tr>
+               
+                </tbody>
+
+            </table>
+        </div>
+    
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="container">
+       <h2>Liste des employees </h2>
+       <div class="row">
+        <button type="submit" routerLink="/create-employee"  >Nouveau employee</button>
+       </div>
+     
+       <ul class="responsive-table">
+         <li class="table-header">
+           <div class="col col-1">#</div>
+           <div class="col col-2">Nom</div>
+           <div class="col col-3">Prenom</div>
+           <div class="col col-4">Email</div>
+           <div class="col col-4">Télephone</div>
+         </li>
+         <li class="table-row" *ngFor="let item of employees; index as i">
+           <div class="col col-1" data-label="Job Id">{{i+1}}</div>
+           <div class="col col-2" data-label="Customer Name">{{item.firstName}}</div>
+           <div class="col col-3" data-label="Amount">{{item.lastName}}</div>
+           <div class="col col-4" data-label="Payment Status">{{item.email}}</div>
+           <div class="col col-4" data-label="Payment Status">{{item.tel}}</div>
+                     <div class="col col-4" data-label="Payment Status">
+                          <button (click)= "updateEmployee(item.id)" class = "btn btn-info"> Update</button>
+                          <button (click)= "deleteEmployee(item.id)" class = "btn btn-danger"  style="margin: left 40px"> Delete</button>
+                          <button (click)= "employeeDetails(item.id)" class = "btn btn-info"> View</button>
+
+                 </div>
+         </li>
+         
+         
+       </ul>
+     </div>
+ </div>
